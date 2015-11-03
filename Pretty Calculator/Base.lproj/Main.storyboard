@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pretty_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,199 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prettyCalcBg" translatesAutoresizingMaskIntoConstraints="NO" id="gF4-3q-Z0I">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6Hi-9P-lQv">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="displayWindow" translatesAutoresizingMaskIntoConstraints="NO" id="Qgp-rv-QoZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="175"/>
+                                        <animations/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BiR-MW-9q7">
+                                        <rect key="frame" x="0.0" y="180" width="600" height="420"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fzD-iV-Gft">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ywb-dz-9P7" userLabel="7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="146" height="80"/>
+                                                        <animations/>
+                                                        <state key="normal" image="7Tile"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KR2-1U-ejk" userLabel="8">
+                                                        <rect key="frame" x="151" y="0.0" width="147" height="80"/>
+                                                        <animations/>
+                                                        <state key="normal" image="8Tile"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAa-1J-82B" userLabel="9">
+                                                        <rect key="frame" x="303" y="0.0" width="146" height="80"/>
+                                                        <animations/>
+                                                        <state key="normal" image="9Tile"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiT-wE-Ns8" userLabel="divide">
+                                                        <rect key="frame" x="454" y="0.0" width="146" height="80"/>
+                                                        <animations/>
+                                                        <state key="normal" image="divideTile"/>
+                                                    </button>
+                                                </subviews>
+                                                <animations/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RSm-Th-vWt">
+                                                <rect key="frame" x="0.0" y="85" width="600" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6U-Oq-H85" userLabel="4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="146" height="80"/>
+                                                        <animations/>
+                                                        <state key="normal" image="4Tile"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Blt-D4-CKt" userLabel="5">
+                                                        <rect key="frame" x="151" y="0.0" width="147" height="80"/>
+                                                        <animations/>
+                                                        <state key="normal" image="5Tile"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dfk-op-Dsy" userLabel="6">
+                                                        <rect key="frame" x="303" y="0.0" width="146" height="80"/>
+                                                        <animations/>
+                                                        <state key="normal" image="6Tile"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kD6-J1-55L" userLabel="multiply">
+                                                        <rect key="frame" x="454" y="0.0" width="146" height="80"/>
+                                                        <animations/>
+                                                        <state key="normal" image="multiplyTile"/>
+                                                    </button>
+                                                </subviews>
+                                                <animations/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DFk-4V-Svh">
+                                                <rect key="frame" x="0.0" y="170" width="600" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Te-u3-caB" userLabel="1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="146" height="80"/>
+                                                        <animations/>
+                                                        <state key="normal" image="1Tile"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHl-Qt-UZp" userLabel="2">
+                                                        <rect key="frame" x="151" y="0.0" width="147" height="80"/>
+                                                        <animations/>
+                                                        <state key="normal" image="2Tile"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUK-Gu-wlv" userLabel="3">
+                                                        <rect key="frame" x="303" y="0.0" width="146" height="80"/>
+                                                        <animations/>
+                                                        <state key="normal" image="3Tile"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elj-9x-PfU" userLabel="subtract">
+                                                        <rect key="frame" x="454" y="0.0" width="146" height="80"/>
+                                                        <animations/>
+                                                        <state key="normal" image="subtractTile"/>
+                                                    </button>
+                                                </subviews>
+                                                <animations/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CUM-he-U2Q">
+                                                <rect key="frame" x="0.0" y="255" width="600" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hyv-GQ-0q1" userLabel="posNeg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="146" height="80"/>
+                                                        <animations/>
+                                                        <state key="normal" image="posNegTile"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKl-mn-dXN" userLabel="0">
+                                                        <rect key="frame" x="151" y="0.0" width="147" height="80"/>
+                                                        <animations/>
+                                                        <state key="normal" image="0Tile"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CP-fW-dG5" userLabel="decimal">
+                                                        <rect key="frame" x="303" y="0.0" width="146" height="80"/>
+                                                        <animations/>
+                                                        <state key="normal" image="decimalTile"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toa-Cp-VZT" userLabel="plus">
+                                                        <rect key="frame" x="454" y="0.0" width="146" height="80"/>
+                                                        <animations/>
+                                                        <state key="normal" image="addTile"/>
+                                                    </button>
+                                                </subviews>
+                                                <animations/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Btc-3y-6Na">
+                                                <rect key="frame" x="0.0" y="340" width="600" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFS-Ps-x8t" userLabel="clear">
+                                                        <rect key="frame" x="0.0" y="0.0" width="146" height="80"/>
+                                                        <animations/>
+                                                        <state key="normal" image="clearTile"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPg-4x-KkZ" userLabel="percentage">
+                                                        <rect key="frame" x="151" y="0.0" width="147" height="80"/>
+                                                        <animations/>
+                                                        <state key="normal" image="percentageTile"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4A-Mb-f2r" userLabel="exponent">
+                                                        <rect key="frame" x="303" y="0.0" width="146" height="80"/>
+                                                        <animations/>
+                                                        <state key="normal" image="exponentTile"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWe-ZH-KUX" userLabel="equals">
+                                                        <rect key="frame" x="454" y="0.0" width="146" height="80"/>
+                                                        <animations/>
+                                                        <state key="normal" image="equalsTile"/>
+                                                    </button>
+                                                </subviews>
+                                                <animations/>
+                                            </stackView>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gF4-3q-Z0I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="33M-yL-ZT7"/>
+                            <constraint firstAttribute="trailing" secondItem="gF4-3q-Z0I" secondAttribute="trailing" id="C9y-ph-Fhi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gF4-3q-Z0I" secondAttribute="bottom" id="Ip0-6a-ABb"/>
+                            <constraint firstItem="6Hi-9P-lQv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OMM-U3-hcv"/>
+                            <constraint firstAttribute="bottom" secondItem="6Hi-9P-lQv" secondAttribute="bottom" id="bId-nY-m6h"/>
+                            <constraint firstAttribute="trailing" secondItem="6Hi-9P-lQv" secondAttribute="trailing" id="hmh-B8-ofM"/>
+                            <constraint firstItem="6Hi-9P-lQv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="meM-kN-khA"/>
+                            <constraint firstItem="gF4-3q-Z0I" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rba-3f-7YV"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="336"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="0Tile" width="300" height="300"/>
+        <image name="1Tile" width="300" height="300"/>
+        <image name="2Tile" width="300" height="300"/>
+        <image name="3Tile" width="300" height="300"/>
+        <image name="4Tile" width="300" height="300"/>
+        <image name="5Tile" width="300" height="300"/>
+        <image name="6Tile" width="300" height="300"/>
+        <image name="7Tile" width="300" height="300"/>
+        <image name="8Tile" width="300" height="300"/>
+        <image name="9Tile" width="300" height="300"/>
+        <image name="addTile" width="300" height="300"/>
+        <image name="clearTile" width="300" height="300"/>
+        <image name="decimalTile" width="300" height="300"/>
+        <image name="displayWindow" width="1242" height="626"/>
+        <image name="divideTile" width="300" height="300"/>
+        <image name="equalsTile" width="300" height="300"/>
+        <image name="exponentTile" width="300" height="300"/>
+        <image name="multiplyTile" width="300" height="300"/>
+        <image name="percentageTile" width="300" height="300"/>
+        <image name="posNegTile" width="300" height="300"/>
+        <image name="prettyCalcBg" width="1242" height="2208"/>
+        <image name="subtractTile" width="300" height="300"/>
+    </resources>
 </document>
