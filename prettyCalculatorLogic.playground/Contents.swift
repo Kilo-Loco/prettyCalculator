@@ -38,3 +38,12 @@ prefix func %% (num: Double) -> Double {
 
 
 %%40
+
+var num = 5
+++num
+num++
+num
+
+5 ** 2
+
+

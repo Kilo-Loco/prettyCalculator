@@ -30,10 +30,10 @@ enum Operation: String {
     case Multiply = "*"
     case Subtract = "-"
     case Add = "+"
-    case Equals = "="
     case PosNeg = "*(-1)"
     case Decimal = "."
     case Clear = ""
     case Percentage = "%%"
     case Exponent = "**"
+    
 }
